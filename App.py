@@ -5,6 +5,9 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
 import torch
 import matplotlib.pyplot as plt
+import sys
+st.write(f"Python version: {sys.version}")
+
 
 # Charger le tokenizer et le modèle
 model_name = "cardiffnlp/xlm-roberta-base-tweet-sentiment-fr"
