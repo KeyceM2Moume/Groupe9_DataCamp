@@ -3,21 +3,21 @@ Spotify_Reviews
 
 1 - Guide d'installation et explication des demarches 
 
-    A- Web Scrapping 
+    A- Web Scrapping (Google_Play_Scrapper.ipynb)
     
  -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook . 
 est une commande utilisée en Python pour installer une bibliothèque appelée google-play-scraper. Cette bibliothèque offre un moyen programmatique d'interagir avec le Google Play Store, c'est-à-dire d'extraire des informations à partir de celui-ci.
 
 
 
-    B-  Nettoyage du DataSet 
+    B-  Nettoyage du DataSet (notebook  Cleaning.ipynb)
     
   -l'installation de python ou d'un framework si pas fais est necessaire . Dans notre cas nous avons utilisés anaconda qui est une distribution open-source de Python et R spécialement conçue pour les applications liées à la science des données, l'apprentissage automatique, l'analyse de données et le calcul scientifique.
   
   -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. Si les bibliotheques Pandas et Re ne sont pas installé faudra le faire grace à la commande : pip install pandas 
 
 
-    C- Modelisation 
+    C- Modelisation (FR_Modele_Roberta.ipynb) 
     
   -Récuperation du modèle Roberta dans hugging Face 
 
@@ -36,7 +36,7 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
   -ensuite on ajoute kes prédiction au dataframe dans de nouvelle colones et on sauvegarde le resultat dans un nouveau fichier csv
 
 
-    D- Creation de l'application streamlit 
+    D- Creation de l'application streamlit (App.Py) 
 
   -Installation de Streamlit (bash) : pip install streamlit 
 
