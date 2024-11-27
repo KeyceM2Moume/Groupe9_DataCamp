@@ -8,3 +8,6 @@ git push -u origin main
 pip install --upgrade pip
 pip install -r requirements.txt
 pip freeze
+pip install tokenizers
+pip install --no-cache-dir -r requirements.txt
+rustc --version
