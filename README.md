@@ -62,6 +62,8 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   -Telechargement des resultats enrichis 
 
+  -Test de l'application en local grace à la commande bash : run App.by
+
 
     E- Hebergement de l'application dans StreamlitCloud 
 
