@@ -3,5 +3,5 @@ pandas
 numpy
 matplotlib
 transformers==4.30.0
-torch==2.2.0
+torch
 scipy
