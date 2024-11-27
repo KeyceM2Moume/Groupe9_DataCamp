@@ -1,7 +1,6 @@
-streamlit
+transformers>=4.0.0
+torch>=1.7.0
 pandas
 numpy
 matplotlib
-torch
-transformers
-scipy
+streamlit
