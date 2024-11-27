@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 matplotlib
-transformers==4.30.0
+transformers
 torch
 scipy
 tokenizers==0.10.3
