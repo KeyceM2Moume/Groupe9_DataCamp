@@ -1,25 +1,27 @@
 # Groupe9_DataCamp
 Spotify_Reviews
  
-1 - Guide d'installation et explication des demarches 
+    1 - Guide d'installation et explication des demarches 
 
-        A- Web Scrapping (Google_Play_Scrapper.ipynb)
+        A- Executer le code Web Scrapping (Scraping.ipynb)
     
- -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook. 
-Est une commande utilisée en Python pour installer une bibliothèque appelée google-play-scraper. Cette bibliothèque offre un moyen programmatique d'interagir avec le Google Play Store, c'est-à-dire d'extraire des informations à partir de celui-ci.
+ -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook si pas déjà fait. 
 
 
+        B-  Executer le notebook  (Cleaning.ipynb)
 
-        B-  Nettoyage du DataSet (notebook  Cleaning.ipynb)
+  -vérifier l'existence du fichier "Scrapped_reviews.csv" avant d'excuter le code. 
     
-  -L'installation de python ou d'un framework si pas fais est nécessaire . Dans notre cas nous avons utilisés anaconda qui est une distribution open-source de Python et R spécialement conçue pour les applications liées à la science des données, l'apprentissage automatique, l'analyse de données et le calcul scientifique.
+  -L'installation de python ou d'un framework si pas fais est nécessaire . Dans notre cas nous avons utilisés Anaconda. 
   
-  -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. Si les bibliotheques Pandas et Re ne sont pas installé, il faudra le faire grâce à la commande : pip install pandas 
+  -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. 
+  
+  -Si les bibliotheques Pandas et Re ne sont pas installé, il faudra le faire grâce aux commandes : pip install pandas et pip install re
 
 
-        C- Modelisation (FR_Modele_Roberta.ipynb) 
-    
-  -Récupération du modèle Roberta dans hugging Face. 
+        C-Exécution du code pour la Modelisation (FR_Modele_Roberta.ipynb) 
+
+  - Vérifier l'existence de "top_1000_cleaned_reviews.csv" avant d'exécuter. 
 
   - Mise à jour pip(dans le bash)  pour éviter les problèmes de compatibilité : pip install --upgrade pip
 
@@ -31,9 +33,8 @@ Est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   - Certains modèles nécessitent un compilateur Rust pour traiter des composants comme les tokenizers. Si nécessaire, installez Rust(bash) : curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-  -ensuite effectuer le chargement de données grace à pandas, le chargement du modele et du tokenizer, faire la tokenisation, et les prédictions ( les avis sont traités par petits groupes et les scores brutes sont extraits du modèles) 
+  - La colone de prédictions sera ajouté au dataframe et le résultat sera sauvegardé dans un nouveau fichier csv.
 
-  -ensuite on ajoute les prédictions au dataframe dans de nouvelles colones et on sauvegarde le résultat dans un nouveau fichier csv.
 
         D- Dashboard avec Power BI
  
@@ -41,15 +42,14 @@ Est une commande utilisée en Python pour installer une bibliothèque appelée g
   - Exploration : Naviguez entre les différents graphiques pour explorer les analyses spécifiques.
   - Si vous ne disposez pas de PowerBI vous pouvez ouvrir Dashboard.png pour consulter le dashboard 
 
-
         E- Creation de l'application streamlit (App.Py) 
 
 
+  - Vérifier l'existence "reviews_with_sentiments.csv" avant d'esecuter le code
+    
   -Installation de Streamlit (bash) : pip install streamlit 
 
   -Installation de Matplotlib (bash) : pip install matplotlib 
-
-  -Importation des bibliothèque pandas, numpy, matplotlib, transformers et streamlit 
 
   -Le tokenizer décompose les textes en un format compréhensible par le modèle.
 
@@ -59,54 +59,24 @@ Est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   -Les sentiments (positif, négatif, neutre) sont déterminés par la classe ayant la probabilité maximale.
 
-  -Création de l'interface utilisateur Streamlit 
+  - Le Code chargee le dataframe à analyser dans le dataframe et Créer l'interface utilisateur Streamlit, la creation des graphique et des recommandations.
 
-  -Code pour charger le dataframe à analyser dans le dataframe 
+  -Tester l'application en local grace à la commande (dans le terminal) : run App.by . Votre navigateur ouvrira l'application 
 
-  -Création des différents graphique 
+  
 
-  -Recommandation par rapport aux avis négatifs 
-
-  -Téléchargement des résultats enrichis 
-
-  -Test de l'application en local grace à la commande bash : run App.by
-
-
-    F- Hebergement de l'application dans StreamlitCloud 
-
-  - Création du compte Streamlit Cloud et connexion au GitHub
-
-  - Lié notre compte GitHub à Streamlit Cloud en autorisant l'accès à nos dépôts via les paramètres de connexion de Streamlit Cloud.
-
-  - Création du dépôt GitHub (KeyceM2Moume/Groupe9_DataCamp) pour y stocker le code source de notre application, y compris les fichiers nécessaires comme app.py, requirements.txt, et d'autres fichiers associés. 
-
-  - Difficulté Rencontrée: La mise en place de fichiers spécifiques, comme requirements.txt, pouvait entraîner des erreurs si les dépendances n'étaient pas correctement listées.
-
-  - Solution : soigneusement répertorié toutes les bibliothèques nécessaires (par exemple, streamlit, transformers, torch, pandas, etc.) dans le fichier requirements.txt.
-
-  - Déploiement de l'application depuis GitHub
-
-  - Difficulté rencontrée : Des erreurs liées à des dépendances manquantes ou des versions incompatibles de bibliothèques (par exemple, tokenizers nécessitant l'installation de Rust).
-
-  - Solution : Nous avons mis à jour les bibliothèques dans le fichier requirements.txt et installé des outils additionnels (comme Rust) pour résoudre les problèmes de compilation, ce qui a permis de finaliser l'installation des dépendances.
-
-  - Installation de Rust (bash) : Invoke-WebRequest -Uri https://sh.rustup.rs -OutFile rustup-init.exe; .\rustup-init.exe. Ensuite suivre les instructions d'installation et l'ajouter dans le PATH
-
-  - Redemarer l'application 
-
-
-2 - Accès à l'application 
+      2 - Accès à l'application 
 
   L'application est accessible à toutes personnes disposant du lien suivant :  https://groupe9datacamp-kpofbvqkesu68ba4wx7ltq.streamlit.app/
 
 
-3 - How to use 
+      3 - Comment utiliser l'application 
 
 L'utilisation de l'application est très simple :
 
 -Cliquer sur le lien de l'application 
 
--Dans la fenêtre "Drag and Drop files here" cliquer sur "Browse files" Pour selectionner un fichier csv à analyser 
+-Dans la fenêtre "Drag and Drop files here" cliquer sur "Browse files" Pour selectionner un fichier csv à analyser (entrer "reviews_with_sentiments.csv") 
 
 -Sélectionner la colonne contenant les commentaire, pour permettre aux graphiques dynamique de l'éviter car n'est pas pertinant pour les visualisations 
 
