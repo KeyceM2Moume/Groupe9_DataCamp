@@ -35,6 +35,10 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   -ensuite on ajoute kes prédiction au dataframe dans de nouvelle colones et on sauvegarde le resultat dans un nouveau fichier csv
 
+    D- Dashboard avec Power BI
+ 
+  - Ouverture : Téléchargez le fichier Dashboard.pbix et ouvrez-le avec Power BI Desktop.
+  -Exploration : Naviguez entre les différents graphiques pour explorer les analyses spécifiques.
 
     E- Creation de l'application streamlit (App.Py) 
 
