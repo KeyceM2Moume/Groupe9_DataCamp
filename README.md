@@ -38,7 +38,8 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
         D- Dashboard avec Power BI
  
   - Ouverture : Téléchargez le fichier Dashboard.pbix et ouvrez-le avec Power BI Desktop.
-  -Exploration : Naviguez entre les différents graphiques pour explorer les analyses spécifiques.
+  - Exploration : Naviguez entre les différents graphiques pour explorer les analyses spécifiques.
+  - Si vous ne disposez pas de PowerBI vous pouvez ouvrir Dashboard.png pour consulter le dashboard 
 
         E- Creation de l'application streamlit (App.Py) 
 
