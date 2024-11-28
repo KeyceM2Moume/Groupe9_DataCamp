@@ -1,27 +1,27 @@
 # Groupe9_DataCamp
 Spotify_Reviews
  
-Guide d'installation et explication des demarches 
+Guide d'installation et explication des démarches 
 
 
 
-        A- Executer le code Web Scrapping (Scraping.ipynb)
+        A- Exécuter le code Web Scrapping (Scraping.ipynb)
     
  -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook si pas déjà fait. 
 
 
-        B-  Executer le notebook  (Cleaning.ipynb)
+        B-  Exécuter le notebook  (notebook Cleaning.ipynb)
 
-  -vérifier l'existence du fichier "Scrapped_reviews.csv" avant d'excuter le code. 
+  -vérifier l'existence du fichier "Scrapped_reviews.csv" avant d'exécuter le code. 
     
   -L'installation de python ou d'un framework si pas fais est nécessaire . Dans notre cas nous avons utilisés Anaconda. 
   
   -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. 
   
-  -Si les bibliotheques Pandas et Re ne sont pas installé, il faudra le faire grâce aux commandes : pip install pandas et pip install re
+  -Si les bibliothèques Pandas et Re ne sont pas installées, il faudra le faire grâce aux commandes : pip install pandas et pip install re
 
 
-        C-Exécution du code pour la Modelisation (FR_Modele_Roberta.ipynb) 
+        C-Exécution du code pour la Modélisation (FR_Modele_Roberta.ipynb) 
 
   - Vérifier l'existence de "top_1000_cleaned_reviews.csv" avant d'exécuter. 
 
@@ -31,11 +31,11 @@ Guide d'installation et explication des demarches
 
   - Installation de PyTorch nécessaire pour les calculs du modèle, notamment pour les tenseurs et les prédictions(bash). : pip install torch
 
-  - installation de scipy est utilisé pour la fonction softmax, qui transforme les logits en probabilités (bash). : pip install scipy
+  - Installation de scipy est utilisé pour la fonction softmax, qui transforme les logits en probabilités (bash). : pip install scipy
 
   - Certains modèles nécessitent un compilateur Rust pour traiter des composants comme les tokenizers. Si nécessaire, installez Rust(bash) : curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-  - La colone de prédictions sera ajouté au dataframe et le résultat sera sauvegardé dans un nouveau fichier csv.
+  - La colone de prédictions sera ajoutée au dataframe et le résultat sera sauvegardé dans un nouveau fichier csv.
 
 
         D- Dashboard avec Power BI
@@ -44,10 +44,10 @@ Guide d'installation et explication des demarches
   - Exploration : Naviguez entre les différents graphiques pour explorer les analyses spécifiques.
   - Si vous ne disposez pas de PowerBI vous pouvez ouvrir Dashboard.png pour consulter le dashboard 
 
-        E- Creation de l'application streamlit (App.Py) 
+        E- Création de l'application streamlit (App.Py) 
 
 
-  - Vérifier l'existence "reviews_with_sentiments.csv" avant d'esecuter le code
+  - Vérifier l'existence "reviews_with_sentiments.csv" avant d'exécuter le code
     
   -Installation de Streamlit (bash) : pip install streamlit 
 
@@ -61,9 +61,9 @@ Guide d'installation et explication des demarches
 
   -Les sentiments (positif, négatif, neutre) sont déterminés par la classe ayant la probabilité maximale.
 
-  - Le Code chargee le dataframe à analyser dans le dataframe et Créer l'interface utilisateur Streamlit, la creation des graphique et des recommandations.
+  - Le code charge le dataframe à analyser et créer l'interface utilisateur Streamlit, la création des graphique et des recommandations.
 
-  -Tester l'application en local grace à la commande (dans le terminal) : run App.by . Votre navigateur ouvrira l'application 
+  -Tester l'application en local grâce à la commande (dans le terminal) : run App.by . Votre navigateur ouvrira l'application 
 
   
 
@@ -78,21 +78,11 @@ L'utilisation de l'application est très simple :
 
 -Cliquer sur le lien de l'application 
 
--Dans la fenêtre "Drag and Drop files here" cliquer sur "Browse files" Pour selectionner un fichier csv à analyser (entrer "reviews_with_sentiments.csv") 
+-Dans la fenêtre "Drag and Drop files here" cliquer sur "Browse files" pour selectionner un fichier csv à analyser (entrer "reviews_with_sentiments.csv") 
 
--Sélectionner la colonne contenant les commentaire, pour permettre aux graphiques dynamique de l'éviter car n'est pas pertinant pour les visualisations 
+-Sélectionner la colonne contenant les commentaire ("content"), pour permettre aux graphiques dynamique de l'éviter car n'est pas pertinant pour les visualisations 
 
--Sélectionnez la colonne contenant les dates (at)(si disponible) nécessaire à la courbe d'évolution des sentiment en fonction des années 
+-Sélectionnez la colonne contenant les dates ("at")(si disponible) nécessaire à la courbe d'évolution des sentiments en fonction des années 
 
 -Cliquer sur télécharger les données pour sauvegarder les graphiques si besoin 
-  
-
-
-
-    
-
-  
-
-  
-
   
