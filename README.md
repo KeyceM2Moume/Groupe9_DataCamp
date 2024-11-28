@@ -36,7 +36,7 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
   -ensuite on ajoute kes prédiction au dataframe dans de nouvelle colones et on sauvegarde le resultat dans un nouveau fichier csv
 
 
-    D- Creation de l'application streamlit (App.Py) 
+    E- Creation de l'application streamlit (App.Py) 
 
   -Installation de Streamlit (bash) : pip install streamlit 
 
@@ -65,7 +65,7 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
   -Test de l'application en local grace à la commande bash : run App.by
 
 
-    E- Hebergement de l'application dans StreamlitCloud 
+    F- Hebergement de l'application dans StreamlitCloud 
 
   - Création du compte Streamlit Cloud et connexion au GitHub
 
