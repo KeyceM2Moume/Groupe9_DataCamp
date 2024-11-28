@@ -5,25 +5,25 @@ Spotify_Reviews
 
     A- Web Scrapping (Google_Play_Scrapper.ipynb)
     
- -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook . 
-est une commande utilisée en Python pour installer une bibliothèque appelée google-play-scraper. Cette bibliothèque offre un moyen programmatique d'interagir avec le Google Play Store, c'est-à-dire d'extraire des informations à partir de celui-ci.
+ -!pip install google_play_scraper : Commande à effectuer dans le bash ou directement dans le notebook. 
+Est une commande utilisée en Python pour installer une bibliothèque appelée google-play-scraper. Cette bibliothèque offre un moyen programmatique d'interagir avec le Google Play Store, c'est-à-dire d'extraire des informations à partir de celui-ci.
 
 
 
     B-  Nettoyage du DataSet (notebook  Cleaning.ipynb)
     
-  -l'installation de python ou d'un framework si pas fais est necessaire . Dans notre cas nous avons utilisés anaconda qui est une distribution open-source de Python et R spécialement conçue pour les applications liées à la science des données, l'apprentissage automatique, l'analyse de données et le calcul scientifique.
+  -L'installation de python ou d'un framework si pas fais est nécessaire . Dans notre cas nous avons utilisés anaconda qui est une distribution open-source de Python et R spécialement conçue pour les applications liées à la science des données, l'apprentissage automatique, l'analyse de données et le calcul scientifique.
   
-  -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. Si les bibliotheques Pandas et Re ne sont pas installé faudra le faire grace à la commande : pip install pandas 
+  -Le code prépare le dataset d'avis en le nettoyant, en filtrant les avis les plus pertinents et en formatant les données pour une analyse plus approfondie. Il utilise des techniques de nettoyage de texte et de manipulation de données pour obtenir un dataset de qualité. Si les bibliotheques Pandas et Re ne sont pas installé, il faudra le faire grâce à la commande : pip install pandas 
 
 
     C- Modelisation (FR_Modele_Roberta.ipynb) 
     
-  -Récuperation du modèle Roberta dans hugging Face 
+  -Récupération du modèle Roberta dans hugging Face. 
 
   - Mise à jour pip(dans le bash)  pour éviter les problèmes de compatibilité : pip install --upgrade pip
 
-  - installation La bibliothèque transformers(bash) est utilisée pour charger le modèle et le tokenizer : pip install transformers
+  - Installation : La bibliothèque transformers(bash) est utilisée pour charger le modèle et le tokenizer : pip install transformers
 
   - Installation de PyTorch nécessaire pour les calculs du modèle, notamment pour les tenseurs et les prédictions(bash). : pip install torch
 
@@ -31,18 +31,18 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   - Certains modèles nécessitent un compilateur Rust pour traiter des composants comme les tokenizers. Si nécessaire, installez Rust(bash) : curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-  -ensuite effectuer le chargement de données grace à pandas , le chargement du modele et du tokenizer , faire la tokenisation, et les predictions ( les avis sont traités par petits groupes et les scores brutes sont extraits du modeles) 
+  -ensuite effectuer le chargement de données grace à pandas, le chargement du modele et du tokenizer, faire la tokenisation, et les prédictions ( les avis sont traités par petits groupes et les scores brutes sont extraits du modèles) 
 
-  -ensuite on ajoute kes prédiction au dataframe dans de nouvelle colones et on sauvegarde le resultat dans un nouveau fichier csv
+  -ensuite on ajoute les prédictions au dataframe dans de nouvelles colones et on sauvegarde le résultat dans un nouveau fichier csv.
 
 
-    E- Creation de l'application streamlit (App.Py) 
+    E- Création de l'application streamlit (App.Py) 
 
   -Installation de Streamlit (bash) : pip install streamlit 
 
   -Installation de Matplotlib (bash) : pip install matplotlib 
 
-  -importation des bibliotheque pandas, numpy, matplotlib, transformers et streamlit 
+  -Importation des bibliothèque pandas, numpy, matplotlib, transformers et streamlit 
 
   -Le tokenizer décompose les textes en un format compréhensible par le modèle.
 
@@ -52,15 +52,15 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   -Les sentiments (positif, négatif, neutre) sont déterminés par la classe ayant la probabilité maximale.
 
-  -Creation de l'interface utilisateur Streamlit 
+  -Création de l'interface utilisateur Streamlit 
 
-  -code pour charger le dataframe à analyser dans le dataframe 
+  -Code pour charger le dataframe à analyser dans le dataframe 
 
-  -creation des differents graphique 
+  -Création des différents graphique 
 
-  -Recomandation par rapport aux avis négatifs 
+  -Recommandation par rapport aux avis négatifs 
 
-  -Telechargement des resultats enrichis 
+  -Téléchargement des résultats enrichis 
 
   -Test de l'application en local grace à la commande bash : run App.by
 
@@ -69,7 +69,7 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
 
   - Création du compte Streamlit Cloud et connexion au GitHub
 
-  - lié notre compte GitHub à Streamlit Cloud en autorisant l'accès à nos dépôts via les paramètres de connexion de Streamlit Cloud.
+  - Lié notre compte GitHub à Streamlit Cloud en autorisant l'accès à nos dépôts via les paramètres de connexion de Streamlit Cloud.
 
   - Création du dépôt GitHub (KeyceM2Moume/Groupe9_DataCamp) pour y stocker le code source de notre application, y compris les fichiers nécessaires comme app.py, requirements.txt, et d'autres fichiers associés. 
 
@@ -88,24 +88,24 @@ est une commande utilisée en Python pour installer une bibliothèque appelée g
   - Redemarer l'application 
 
 
-2 - Acces à l'application 
+2 - Accès à l'application 
 
   L'application est accessible à toutes personnes disposant du lien suivant :  https://groupe9datacamp-kpofbvqkesu68ba4wx7ltq.streamlit.app/
 
 
 3 - How to use 
 
-  l'utilisation de l'application est très simple 
+L'utilisation de l'application est très simple :
 
 -Cliquer sur le lien de l'application 
 
--Dans la fenetre "Drag and Drop files here" cliquer sur "Browse files" Pour selectionner un fichier csv à analyser 
+-Dans la fenêtre "Drag and Drop files here" cliquer sur "Browse files" Pour selectionner un fichier csv à analyser 
 
--Selectionner la colonne contenant les commentaire , pour permettre aux graphiques dynamique de l'éviter car n'est pas pertinant pour les visualisations 
+-Sélectionner la colonne contenant les commentaire, pour permettre aux graphiques dynamique de l'éviter car n'est pas pertinant pour les visualisations 
 
--Sélectionnez la colonne contenant les dates (si disponible) necessaire à la courbe d'évolution des sentiment en fonction des années 
+-Sélectionnez la colonne contenant les dates (at)(si disponible) nécessaire à la courbe d'évolution des sentiment en fonction des années 
 
--Clisquer sur télécharger les données pour sauvegarder les graphiques si besoin 
+-Cliquer sur télécharger les données pour sauvegarder les graphiques si besoin 
   
 
 
